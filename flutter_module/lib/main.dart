@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:dio/dio.dart';
-//void main() => runApp(new MyApp());
-void main() => runApp(_widgetForRoute(window.defaultRouteName));
+
+void main() => runApp(new MyApp());
+//void main() => runApp(_widgetForRoute(window.defaultRouteName));
 
 Widget _widgetForRoute(String route) {
   switch (route) {
@@ -42,14 +43,19 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-//  @override
-//  void initState() {
-//    super.initState();
-//    Dio dio = new Dio();
-//    Response response=await dio.get("https://www.google.com/");
-//    print(future);
-//  }
 
+  @override
+  void initState() {
+    super.initState();
+    getData();
+  }
+
+  void getData() async {
+    Dio dio = new Dio();
+    Response response =await dio.get("https://xhj.aihuishou.com/app/setting");
+    print("请求网络了");
+    print(response.data.toString());
+  }
 
   @override
   Widget build(BuildContext context) {
