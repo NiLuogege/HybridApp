@@ -18,22 +18,20 @@ class TabBarWidget extends StatefulWidget {
   final Widget floatingActionButton;
   final TarWidgetControl tarWidgetControl;
   final PageController topPageController;
-  final ValueChanged<int> onPageChanged;
 
-  TabBarWidget(
-      {Key key,
-      this.type,
-      this.tabItems,
-      this.tabViews,
-      this.backgroundColor,
-      this.indicatorColor,
-      this.title,
-      this.drawer,
-      this.floatingActionButton,
-      this.tarWidgetControl,
-      this.topPageController,
-      this.onPageChanged})
-      : super(key: key);
+  TabBarWidget({
+    Key key,
+    this.type,
+    this.tabItems,
+    this.tabViews,
+    this.backgroundColor,
+    this.indicatorColor,
+    this.title,
+    this.drawer,
+    this.floatingActionButton,
+    this.tarWidgetControl,
+    this.topPageController,
+  }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => new _TabBarState(
@@ -41,7 +39,6 @@ class TabBarWidget extends StatefulWidget {
         tabViews,
         backgroundColor,
         indicatorColor,
-        onPageChanged,
       );
 }
 
@@ -67,10 +64,9 @@ class _TabBarState extends State<TabBarWidget>
 //
 //  final PageController _pageController;
 //
-  final ValueChanged<int> _onPageChanged;
 
-  _TabBarState(this._type, this._tabViews, this._backgroundColor,
-      this._indicatorColor, this._onPageChanged)
+  _TabBarState(
+      this._type, this._tabViews, this._backgroundColor, this._indicatorColor)
       : super();
 
   TabController _tabController;
