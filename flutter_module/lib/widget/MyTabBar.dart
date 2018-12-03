@@ -19,6 +19,9 @@ class MyTabBar extends StatefulWidget implements PreferredSizeWidget {
 class MyTabBarState extends State<MyTabBar> {
   @override
   Widget build(BuildContext context) {
-    return new SafeArea(top: true, child: widget.child);
+    return new Container(
+      color: Colors.black26,
+      child: new SafeArea(top: true, child: widget.child),
+    );
   }
 }
