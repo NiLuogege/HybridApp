@@ -38,13 +38,6 @@ class TabBarWidget extends StatefulWidget {
   State<StatefulWidget> createState() => new _TabBarState(
         type,
         tabViews,
-        indicatorColor,
-        title,
-        drawer,
-        floatingActionButton,
-        tarWidgetControl,
-        topPageController,
-        onPageChanged,
       );
 }
 
@@ -54,31 +47,22 @@ class _TabBarState extends State<TabBarWidget>
 
   final List<Widget> _tabViews;
 
-  final Color _indicatorColor;
+//
+//  final Color _indicatorColor;
+//
+//  final Widget _title;
+//
+//  final Widget _drawer;
+//
+//  final Widget _floatingActionButton;
+//
+//  final TarWidgetControl _tarWidgetControl;
+//
+//  final PageController _pageController;
+//
+//  final ValueChanged<int> _onPageChanged;
 
-  final Widget _title;
-
-  final Widget _drawer;
-
-  final Widget _floatingActionButton;
-
-  final TarWidgetControl _tarWidgetControl;
-
-  final PageController _pageController;
-
-  final ValueChanged<int> _onPageChanged;
-
-  _TabBarState(
-    this._type,
-    this._tabViews,
-    this._indicatorColor,
-    this._title,
-    this._drawer,
-    this._floatingActionButton,
-    this._tarWidgetControl,
-    this._pageController,
-    this._onPageChanged,
-  ) : super();
+  _TabBarState(this._type, this._tabViews) : super();
 
   TabController _tabController;
 
@@ -100,9 +84,9 @@ class _TabBarState extends State<TabBarWidget>
     //顶部tab
     if (this._type == TabBarWidget.TOP_TAB) {
       return new Scaffold(
-        floatingActionButton: _floatingActionButton,
-        persistentFooterButtons:
-            _tarWidgetControl == null ? [] : _tarWidgetControl.footerButton,
+//        floatingActionButton: _floatingActionButton,
+//        persistentFooterButtons:
+//            _tarWidgetControl == null ? [] : _tarWidgetControl.footerButton,
         body: new PageView(
           children: _tabViews,
         ),

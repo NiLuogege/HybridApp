@@ -3,6 +3,9 @@ import 'dart:ui';
 import 'package:dio/dio.dart';
 import 'package:flutter_module/widget/TabBarWidget.dart';
 import 'common/style/Style.dart';
+import 'page/DynamicPage.dart';
+import 'page/MyPage.dart';
+import 'page/TrendPage.dart';
 
 void main() => runApp(new MyApp());
 //void main() => runApp(_widgetForRoute(window.defaultRouteName));
@@ -39,6 +42,12 @@ class MyApp extends StatelessWidget {
       _renderTab(MyIcons.MAIN_DT, "Dynamic")
     ];
 
+    List<Widget> pageViews = [
+      new DynamicPage(),
+      new TrendPage(),
+      new MyPage(),
+    ];
+
     return new MaterialApp(
       title: 'Flutter Demo',
       theme: new ThemeData(
@@ -47,7 +56,7 @@ class MyApp extends StatelessWidget {
       home: new TabBarWidget(
         type: TabBarWidget.TOP_TAB,
         tabItems: tabs,
-        tabViews: tabs,
+        tabViews: pageViews,
       ),
     );
   }
