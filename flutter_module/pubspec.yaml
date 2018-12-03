@@ -20,3 +20,8 @@ flutter:
   module:
     androidPackage: com.example.fluttermodule
     iosBundleIdentifier: com.example.flutterModule
+
+  fonts:
+    - family: myIconFont
+      fonts:
+        - asset: assets/font/iconfont.ttf

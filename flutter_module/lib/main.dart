@@ -37,9 +37,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> tabs = [
-      _renderTab(MyIcons.MAIN_DT, "Dynamic"),
-      _renderTab(MyIcons.MAIN_DT, "Dynamic"),
-      _renderTab(MyIcons.MAIN_DT, "Dynamic")
+      _renderTab(MyIcons.MAIN_DT, "动态"),
+      _renderTab(MyIcons.MAIN_QS, "趋势"),
+      _renderTab(MyIcons.MAIN_MY, "我的")
     ];
 
     List<Widget> pageViews = [
