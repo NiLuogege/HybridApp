@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       home: new TabBarWidget(
-        type: TabBarWidget.TOP_TAB,
+        type: TabBarWidget.BOTTOM_TAB,
         tabItems: tabs,
         tabViews: pageViews,
         backgroundColor: Color(MyColors.red2),

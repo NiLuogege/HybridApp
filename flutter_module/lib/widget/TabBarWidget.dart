@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widget/MyTabBar.dart';
 
+///tabBar 和 TabBarView 封装
 class TabBarWidget extends StatefulWidget {
   ///底部模式type
   static const int BOTTOM_TAB = 1;
@@ -13,11 +14,6 @@ class TabBarWidget extends StatefulWidget {
   final List<Widget> tabViews;
   final Color backgroundColor;
   final Color indicatorColor;
-  final Widget title;
-  final Widget drawer;
-  final Widget floatingActionButton;
-  final TarWidgetControl tarWidgetControl;
-  final PageController topPageController;
 
   TabBarWidget({
     Key key,
@@ -26,11 +22,6 @@ class TabBarWidget extends StatefulWidget {
     this.tabViews,
     this.backgroundColor,
     this.indicatorColor,
-    this.title,
-    this.drawer,
-    this.floatingActionButton,
-    this.tarWidgetControl,
-    this.topPageController,
   }) : super(key: key);
 
   @override
@@ -48,22 +39,9 @@ class _TabBarState extends State<TabBarWidget>
 
   final List<Widget> _tabViews;
 
-//
   final Color _backgroundColor;
 
   final Color _indicatorColor;
-
-//
-//  final Widget _title;
-//
-//  final Widget _drawer;
-//
-//  final Widget _floatingActionButton;
-//
-//  final TarWidgetControl _tarWidgetControl;
-//
-//  final PageController _pageController;
-//
 
   _TabBarState(
       this._type, this._tabViews, this._backgroundColor, this._indicatorColor)
@@ -106,7 +84,19 @@ class _TabBarState extends State<TabBarWidget>
       );
     }
 
-    return null;
+    return new Scaffold(
+        body: new TabBarView(
+          children: _tabViews,
+          controller: _tabController,
+        ),
+        bottomNavigationBar: new Material(
+          color: _backgroundColor,
+          child: new TabBar(
+            controller: _tabController,
+            tabs: widget.tabItems,
+            indicatorColor: _indicatorColor,
+          ),
+        ));
   }
 }
 
