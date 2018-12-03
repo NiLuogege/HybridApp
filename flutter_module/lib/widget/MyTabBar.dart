@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyTabBar extends StatefulWidget implements PreferredSizeWidget {
   final Widget child;
-  final int backgroundColor;
+  final Color backgroundColor;
 
   MyTabBar(this.child, this.backgroundColor) : assert(child != null);
 
@@ -21,7 +21,7 @@ class MyTabBarState extends State<MyTabBar> {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      color: new Color(widget.backgroundColor),
+      color: widget.backgroundColor,
       child: new SafeArea(top: true, child: widget.child),
     );
   }

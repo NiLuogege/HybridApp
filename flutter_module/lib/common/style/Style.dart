@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+class MyColors {
+  static const int white = 0xffffffff;
+  static const int red2 = 0xff8B4513;
+}
+
 class MyIcons {
   static const String FONT_FAMILY = "myIconFont";
 
