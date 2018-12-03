@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widget/MyTabBar.dart';
 
 class TabBarWidget extends StatefulWidget {
   ///底部模式type
@@ -87,6 +88,8 @@ class _TabBarState extends State<TabBarWidget>
 //        floatingActionButton: _floatingActionButton,
 //        persistentFooterButtons:
 //            _tarWidgetControl == null ? [] : _tarWidgetControl.footerButton,
+        appBar: new MyTabBar(
+            new TabBar(controller: _tabController, tabs: widget.tabItems)),
         body: new PageView(
           children: _tabViews,
         ),

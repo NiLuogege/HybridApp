@@ -49,9 +49,8 @@ class MyApp extends StatelessWidget {
     ];
 
     return new MaterialApp(
-      title: 'Flutter Demo',
       theme: new ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
       home: new TabBarWidget(
         type: TabBarWidget.TOP_TAB,
