@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:connectivity/connectivity.dart';
 import 'ResultData.dart';
 import 'Code.dart';
+import 'dart:collection';
 
 ///请求管理类
 class HttpManager {
@@ -31,6 +32,11 @@ class HttpManager {
         false,
         Code.NETWORK_ERROR,
       );
+    }
+
+    Map<String, String> headers = new HashMap();
+    if (header != null) {
+      header.addAll(header);
     }
   }
 }
