@@ -89,7 +89,8 @@ class _TabBarState extends State<TabBarWidget>
 //        persistentFooterButtons:
 //            _tarWidgetControl == null ? [] : _tarWidgetControl.footerButton,
         appBar: new MyTabBar(
-            new TabBar(controller: _tabController, tabs: widget.tabItems)),
+            new TabBar(controller: _tabController, tabs: widget.tabItems),
+            0xffff0000),
         body: new PageView(
           children: _tabViews,
         ),
