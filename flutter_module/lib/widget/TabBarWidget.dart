@@ -103,12 +103,9 @@ class _TabBarState extends State<TabBarWidget>
               indicatorColor: _indicatorColor,
             ),
             _backgroundColor),
-        body: new PageView(
+        body: new TabBarView(
           children: _tabViews,
-          onPageChanged: (index) {
-            _tabController.animateTo(index);
-            _onPageChanged?.call(index);
-          },
+          controller: _tabController,
         ),
       );
     }
