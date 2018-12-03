@@ -41,6 +41,7 @@ class TabBarWidget extends StatefulWidget {
         tabViews,
         backgroundColor,
         indicatorColor,
+        onPageChanged,
       );
 }
 
@@ -66,10 +67,10 @@ class _TabBarState extends State<TabBarWidget>
 //
 //  final PageController _pageController;
 //
-//  final ValueChanged<int> _onPageChanged;
+  final ValueChanged<int> _onPageChanged;
 
-  _TabBarState(
-      this._type, this._tabViews, this._backgroundColor, this._indicatorColor)
+  _TabBarState(this._type, this._tabViews, this._backgroundColor,
+      this._indicatorColor, this._onPageChanged)
       : super();
 
   TabController _tabController;
@@ -104,6 +105,10 @@ class _TabBarState extends State<TabBarWidget>
             _backgroundColor),
         body: new PageView(
           children: _tabViews,
+          onPageChanged: (index) {
+            _tabController.animateTo(index);
+            _onPageChanged?.call(index);
+          },
         ),
       );
     }
