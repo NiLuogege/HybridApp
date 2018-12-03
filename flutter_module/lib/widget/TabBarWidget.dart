@@ -40,6 +40,7 @@ class TabBarWidget extends StatefulWidget {
         type,
         tabViews,
         backgroundColor,
+        indicatorColor,
       );
 }
 
@@ -52,7 +53,8 @@ class _TabBarState extends State<TabBarWidget>
 //
   final Color _backgroundColor;
 
-//  final Color _indicatorColor;
+  final Color _indicatorColor;
+
 //
 //  final Widget _title;
 //
@@ -66,7 +68,9 @@ class _TabBarState extends State<TabBarWidget>
 //
 //  final ValueChanged<int> _onPageChanged;
 
-  _TabBarState(this._type, this._tabViews, this._backgroundColor) : super();
+  _TabBarState(
+      this._type, this._tabViews, this._backgroundColor, this._indicatorColor)
+      : super();
 
   TabController _tabController;
 
@@ -92,7 +96,11 @@ class _TabBarState extends State<TabBarWidget>
 //        persistentFooterButtons:
 //            _tarWidgetControl == null ? [] : _tarWidgetControl.footerButton,
         appBar: new MyTabBar(
-            new TabBar(controller: _tabController, tabs: widget.tabItems),
+            new TabBar(
+              controller: _tabController,
+              tabs: widget.tabItems,
+              indicatorColor: _indicatorColor,
+            ),
             _backgroundColor),
         body: new PageView(
           children: _tabViews,
