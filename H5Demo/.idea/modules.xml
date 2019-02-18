@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/H5Demo.iml" filepath="$PROJECT_DIR$/H5Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:/soft/flutter/flutter_windows_v0.11.12-beta/flutter/.pub-cache/hosted/pub.flutter-io.cn/connectivity-0.3.2/android/connectivity.iml" filepath="D:/soft/flutter/flutter_windows_v0.11.12-beta/flutter/.pub-cache/hosted/pub.flutter-io.cn/connectivity-0.3.2/android/connectivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/../flutter_module/.android/Flutter/flutter.iml" filepath="$PROJECT_DIR$/../flutter_module/.android/Flutter/flutter.iml" />
     </modules>
   </component>

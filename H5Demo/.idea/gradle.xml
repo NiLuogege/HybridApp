@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/../flutter_module/.android/Flutter" />
+            <option value="D:/soft/flutter/flutter_windows_v0.11.12-beta/flutter/.pub-cache/hosted/pub.flutter-io.cn/connectivity-0.3.2/android" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
